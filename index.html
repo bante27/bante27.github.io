@@ -15,21 +15,44 @@
 
   <style>
     body { font-family: sans-serif; text-align: center; padding: 50px; background-color: #f4f4f9; }
-    .card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: inline-block; max-width: 400px; }
+    
+    /* ሙሉ ካርዱን ሊንክ ለማድረግ የተስተካከለ ስታይል */
+    .card-link { text-decoration: none; display: inline-block; }
+    
+    .card { 
+      background: white; 
+      padding: 30px; 
+      border-radius: 10px; 
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+      max-width: 400px; 
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer; /* ማውሱ ሲያርፍበት የእጅ ምልክት እንዲያሳይ */
+    }
+    
+    /* ማውሱ ካርዱ ላይ ሲያርፍ ትንሽ ከፍ እንዲል (Hover Effect) */
+    .card:hover { 
+      transform: translateY(-5px); 
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+    }
+    
     h1 { color: #333; margin-top: 15px; }
     p { color: #666; }
+    
     /* የፎቶው ስታይል */
     .profile-img { width: 150px; height: 150px; border-radius: 50%; object-fit: cover; border: 3px solid #24292e; }
   </style>
 </head>
 <body>
-  <div class="card">
-    <img src="https://github.com/bante27.png" alt="Bantalem Mitiku Tafere - Professional Web Developer" class="profile-img">
-    
-    <h1>Bantalem Mitiku Tafere</h1>
-    <p>Professional Web Developer | Information Systems Specialist</p>
-    <p>Welcome to my professional portfolio. I specialize in web development and data science.</p>
-    
+
+  <a href="https://github.com/bante27" class="card-link" target="_blank">
+    <div class="card">
+      <img src="https://github.com/bante27.png" alt="Bantalem Mitiku Tafere - Professional Web Developer" class="profile-img">
+      
+      <h1>Bantalem Mitiku Tafere</h1>
+      <p>Professional Web Developer | Information Systems Specialist</p>
+      <p>Welcome to my professional portfolio. I specialize in web development and data science.</p>
     </div>
+  </a>
+
 </body>
 </html>
